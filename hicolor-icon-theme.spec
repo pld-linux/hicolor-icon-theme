@@ -1,6 +1,5 @@
-
-Summary:	TODO
-Summary(pl):	TODO
+Summary:	Directory hierarchy for default icon theme 
+Summary(pl):	Strukrura katalogów dla domy¶lnego motywu ikon 
 Name:		hicolor-icon-theme
 Version:	0.3
 Release:	1
@@ -12,10 +11,10 @@ URL:		http://freedesktop.org/Software/icon-theme
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-TODO
+Directory hierarchy for default icon theme.
 
 %description -l pl
-TODO
+Strukrura katalogów dla domy¶lnego motywu ikon.
 
 %prep
 %setup -q
@@ -25,9 +24,16 @@ TODO
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	PREFIX=%{_prefix}
+# make install is outdated, make all by hand
+#%{__make} install \
+#	DESTDIR=$RPM_BUILD_ROOT \
+#	PREFIX=%{_prefix}
+
+install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor
+install index.theme $RPM_BUILD_ROOT%{_iconsdir}/hicolor/
+for dir in `grep Directories= index.theme|sed -e 's/Directories=//;s/,/ /g'` ; do
+	install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/$dir
+done
 
 %clean
 rm -rf $RPM_BUILD_ROOT
