@@ -1,4 +1,3 @@
-# $Revision: 1.5 $, $Date: 2004/02/06 09:15:14 
 Summary:	Directory hierarchy for default icon theme
 Summary(pl):	Struktura katalogów dla domy¶lnego motywu ikon
 Name:		hicolor-icon-theme
