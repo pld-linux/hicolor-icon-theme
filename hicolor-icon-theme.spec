@@ -8,6 +8,8 @@ Group:		Base
 Source0:	http://freedesktop.org/Software/icon-theme/releases/%{name}-%{version}.tar.gz
 # Source0-md5:	4257206ba86dc37e6b6cf57c9e2f927e
 URL:		http://freedesktop.org/Software/icon-theme
+Conflicts:	gnome-icon-theme < 1.1.6-2
+Conflicts:	kdelibs < 9:3.2.0-4
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
