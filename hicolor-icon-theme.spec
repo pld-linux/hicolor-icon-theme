@@ -1,8 +1,8 @@
 Summary:	Directory hierarchy for default icon theme
 Summary(pl):	Struktura katalogów dla domy¶lnego motywu ikon
 Name:		hicolor-icon-theme
-Version:	0.5
-Release:	3
+Version:	0.9
+Release:	1
 License:	LGPL
 Group:		Base
 Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
@@ -21,19 +21,18 @@ Struktura katalogów dla domy¶lnego motywu ikon.
 %prep
 %setup -q
 
+%build
+%configure
+%{__make}
+
 %install
 rm -rf $RPM_BUILD_ROOT
 
-# make install is outdated, make all by hand
-#%{__make} install \
-#	DESTDIR=$RPM_BUILD_ROOT \
-#	PREFIX=%{_prefix}
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/{24x24/apps,16x16/stock/emoticons}
-install index.theme $RPM_BUILD_ROOT%{_iconsdir}/hicolor
-for dir in `grep Directories= index.theme|sed -e 's/Directories=//;s/,/ /g'` ; do
-	install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/$dir
-done
+# added in Revision 1.11
+install -d $RPM_BUILD_ROOT%{_datadir}/icons/hicolor/16x16/stock/emoticons
 
 %clean
 rm -rf $RPM_BUILD_ROOT
