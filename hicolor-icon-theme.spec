@@ -6,7 +6,7 @@ Release:	1
 License:	LGPL
 Group:		Base
 Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	947c7f6eb68fd95c7b86e87f853ceaa0
+# Source0-md5:	1d0821cb80d394eac30bd8cec5b0b60c
 URL:		http://icon-theme.freedesktop.org/wiki/HicolorTheme
 # Conflicts:	gnome-icon-theme < 1.0.9
 Conflicts:	kdelibs < 9:3.2.0-4
