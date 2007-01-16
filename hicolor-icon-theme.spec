@@ -10,6 +10,7 @@ Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
 URL:		http://icon-theme.freedesktop.org/wiki/HicolorTheme
 # Conflicts:	gnome-icon-theme < 1.0.9
 Conflicts:	kdelibs < 9:3.2.0-4
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
