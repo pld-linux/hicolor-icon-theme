@@ -1,5 +1,5 @@
 Summary:	Directory hierarchy for default icon theme
-Summary(pl):	Struktura katalogÛw dla domy∂lnego motywu ikon
+Summary(pl.UTF-8):   Struktura katalog√≥w dla domy≈õlnego motywu ikon
 Name:		hicolor-icon-theme
 Version:	0.10
 Release:	1
@@ -16,8 +16,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Directory hierarchy for default icon theme.
 
-%description -l pl
-Struktura katalogÛw dla domy∂lnego motywu ikon.
+%description -l pl.UTF-8
+Struktura katalog√≥w dla domy≈õlnego motywu ikon.
 
 %prep
 %setup -q
