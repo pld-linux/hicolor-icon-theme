@@ -1,15 +1,16 @@
 Summary:	Directory hierarchy for default icon theme
 Summary(pl):	Struktura katalogów dla domy¶lnego motywu ikon
 Name:		hicolor-icon-theme
-Version:	0.9
+Version:	0.10
 Release:	1
 License:	LGPL
 Group:		Base
 Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
-# Source0-md5:	1d0821cb80d394eac30bd8cec5b0b60c
+# Source0-md5:	3534f7b8e59785c7d5bfa923e85510a7
 URL:		http://icon-theme.freedesktop.org/wiki/HicolorTheme
 # Conflicts:	gnome-icon-theme < 1.0.9
 Conflicts:	kdelibs < 9:3.2.0-4
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
