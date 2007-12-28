@@ -2,7 +2,7 @@ Summary:	Directory hierarchy for default icon theme
 Summary(pl.UTF-8):	Struktura katalogów dla domyślnego motywu ikon
 Name:		hicolor-icon-theme
 Version:	0.10
-Release:	1
+Release:	2
 License:	LGPL
 Group:		Base
 Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
