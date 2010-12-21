@@ -2,7 +2,7 @@ Summary:	Directory hierarchy for default icon theme
 Summary(pl.UTF-8):	Struktura katalogów dla domyślnego motywu ikon
 Name:		hicolor-icon-theme
 Version:	0.12
-Release:	2
+Release:	3
 License:	LGPL
 Group:		Base
 Source0:	http://icon-theme.freedesktop.org/releases/%{name}-%{version}.tar.gz
@@ -37,10 +37,16 @@ install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/16x16/stock/emoticons
 install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/8x8/devices
 install -d $RPM_BUILD_ROOT%{_iconsdir}/hicolor/42x42/devices
 
+# gtk+2 cache
+touch $RPM_BUILD_ROOT%{_iconsdir}/hicolor/icon-theme.cache
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
 %doc ChangeLog README
-%{_iconsdir}/hicolor
+%dir %{_iconsdir}/hicolor
+%{_iconsdir}/hicolor/*x*
+%{_iconsdir}/hicolor/scalable
+%ghost %{_iconsdir}/hicolor/icon-theme.cache
