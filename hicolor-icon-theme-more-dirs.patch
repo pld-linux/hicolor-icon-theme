@@ -1,6 +1,6 @@
 --- hicolor-icon-theme-0.18/meson.build.orig	2024-05-20 23:26:59.000000000 +0200
 +++ hicolor-icon-theme-0.18/meson.build	2024-10-06 21:53:17.681373929 +0200
-@@ -6,19 +6,26 @@ project('hicolor-icon-theme',
+@@ -6,19 +6,27 @@ project('hicolor-icon-theme',
  pkgc = import('pkgconfig')
  
  icon_sizes = [
@@ -19,6 +19,7 @@
 +  '80x80',
    '96x96',
    '128x128',
++  '144x144',
 +  '160x160',
    '192x192',
    '256x256',

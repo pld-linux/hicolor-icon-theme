@@ -38,17 +38,17 @@ Struktura katalogów dla domyślnego motywu ikon.
 # 160x160/apps  wcm wf-shell
 # 1024x1024/apps  kmymoney scribus ka5-kdevelop-data ka5-krita-data gingerblue gnome-internet-radio-locator gtk-internet-radio-locator octave-gui supertuxkart vcmi
 # 1024x1024/mimetypes  kmymoney ka5-krita-data
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
-%meson build
+%meson
 
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%ninja_install -C build
+%meson_install
 
 mkdir -p $RPM_BUILD_ROOT%{_iconsdir}/hicolor/symbolic/actions
 
